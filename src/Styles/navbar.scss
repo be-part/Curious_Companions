@@ -1,0 +1,40 @@
+$colour_1: #AE9B88;
+$colour_2: #CCB6A2;
+$colour_3: #E3D2C1;
+$colour_4: #FBBD69;
+
+.sidenav {
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+    height: 100vh;
+    background-color: $colour_4;
+}
+.sidenavClosed {
+    height: 100vh;
+    background-color: $colour_4;
+    transition: width 0.3s ease-in-out;
+    width: 80px;
+}
+.sideitem {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: $colour_4;
+}
+.linkText {
+    padding-left: 16px;
+    color: black;
+    font-size: 1rem;
+}
+
+.linkTextClosed {
+    padding-left: 16px;
+    display:none;
+}
+ 
+.sideitem:hover {
+    background-color: $colour_2;
+}

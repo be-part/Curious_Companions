@@ -1,0 +1,38 @@
+$colour_1: #AE9B88;
+$colour_2: #CCB6A2;
+$colour_3: #E3D2C1;
+$font_1: 'Heebo', sans-serif;
+$font_2:  'Shrikhand', cursive;
+
+header {
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+    color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    font-family: $font_2;
+    font-size: 2.5rem;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color:$colour_2;
+}
+
+.menuBtn {
+    align-self: center;
+    align-self: flex-start;  
+    justify-self: flex-end;
+    color: $colour_1;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: transparent;
+}
