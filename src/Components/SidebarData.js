@@ -10,13 +10,13 @@ export const SidebarData = [
     },
     {
         title: 'Cats',
-        path: "/cats",
+        path: "cats",
         icon: <BiIcons.BiSolidCat />,
         className: 'nav-text'
     },
     {
         title: 'Dogs',
-        path: "/dogs",
+        path: "dogs",
         icon: <BiIcons.BiSolidDog  />,
         className: 'nav-text'
     }
