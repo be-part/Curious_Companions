@@ -2,7 +2,7 @@ import { getBreeds } from "../API.js/Api";
 import AnimalCard from "../Components/AnimalCard";
 import "../Styles/main.scss";
 import { useEffect, useState } from "react";
-
+import Cat from "../Assets/Cat.gif"
 
 const Cats = () => {
   const [breeds, setBreeds] = useState([]);
@@ -16,7 +16,7 @@ const Cats = () => {
     });
   }, []);
 
-  if (isLoading) return <p className="Loading"> Loading... </p>;
+  if (isLoading) return <div className="Loading"> <p> Loading... </p> <img src={Cat} alt="loading"/> </div> 
 
   return (
     <div>
