@@ -1,23 +1,10 @@
-$colour_1: #AE9B88;
-$colour_2: #CCB6A2;
-$colour_3: #E3D2C1;
-$font_1: 'Heebo', sans-serif;
+@import '../Styles/variables.scss';
 
 body {
   margin: 0;
   padding: 0;
   background-color: $colour_1;
-  font-size: 10px;
-  font-family: $font_1;
 }
 
-main {
-  padding: 10px;
-}
 
-h2 {
-    font-size: 1.5rem;
-	margin-left: auto;
-	margin-right: auto;
-}
 

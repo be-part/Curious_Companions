@@ -1,5 +1,118 @@
-$colour_1: #AE9B88;
-$colour_2: #CCB6A2;
-$colour_3: #E3D2C1;
+@import "../Styles/variables.scss";
 
+.wrapper {
+  display: inline-flex;
+}
 
+main {
+  margin: 5px;
+  font-size: 10px;
+  font-family: $font_1;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-left: 4rem;
+  font-family: $font_1;
+}
+
+p {
+  margin: 0;
+}
+
+.breeds-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.animal-card-wrapper {
+  width: 24rem;
+  height: 31rem;
+  margin: 10px;
+  border: 2px solid $colour_4;
+  background-color: $colour_3;
+  border-radius: 8px;
+  box-shadow: 10px 5px 5px rgb(94, 78, 69);
+}
+
+.container1 {
+  display: flex;
+  height: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: auto;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  padding: 5px;
+  background-color: $colour_5;
+}
+
+.cat-name {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-family: $font_1;
+}
+
+.container2 {
+  display: flex;
+  width: auto;
+  height: 15rem;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 5px;
+  background-color: $colour_2;
+}
+
+.image {
+  display: flex;
+  width: 12rem;
+  max-height: 15rem;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.image:hover {
+  transform: scale(2);
+}
+
+.container3 {
+  width: auto;
+  height: 3rem;
+  text-align: left;
+  padding: 5px;
+  background-color: $colour_3;
+  font-size: 0.8rem;
+  color: $colour_4;
+  font-family: $font_1;
+}
+
+.container4 {
+  width: auto;
+  height: 7.5rem;
+  text-align: left;
+  padding: 5px;
+  background-color: $colour_3;
+  font-size: 0.8rem;
+  font-family: $font_1;
+}
+
+.container5 {
+  // border: 2px solid red;
+  width: auto;
+  height: auto;
+  text-align: left;
+  padding: 5px;
+  background-color: $colour_3;
+  font-size: 0.7rem;
+  font-family: $font_1;
+}
+
+a {
+  color: $colour_4;
+}

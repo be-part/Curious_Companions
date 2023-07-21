@@ -1,17 +1,14 @@
-$colour_1: #AE9B88;
-$colour_2: #CCB6A2;
-$colour_3: #E3D2C1;
-$colour_4: #FBBD69;
+@import '../Styles/variables.scss';
 
 .sidenav {
-    width: 250px;
+    width: 140px;
     transition: width 0.3s ease-in-out;
-    height: 100vh;
-    background-color: $colour_4;
+    height: auto;
+    background-color: $colour_3;
 }
 .sidenavClosed {
-    height: 100vh;
-    background-color: $colour_4;
+    height: auto;
+    background-color: $colour_3;
     transition: width 0.3s ease-in-out;
     width: 80px;
 }
@@ -22,12 +19,13 @@ $colour_4: #FBBD69;
     cursor: pointer;
     text-decoration: none;
     overflow: hidden;
-    background-color: $colour_4;
+    background-color: $colour_3;
 }
 .linkText {
     padding-left: 16px;
     color: black;
     font-size: 1rem;
+    font-family: $font_1;
 }
 
 .linkTextClosed {

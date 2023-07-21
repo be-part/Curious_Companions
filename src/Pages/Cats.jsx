@@ -1,9 +1,34 @@
-import '../Styles/main.scss';
+import { getBreeds } from "../API.js/Api";
+import AnimalCard from "../Components/AnimalCard";
+import "../Styles/main.scss";
+import { useEffect, useState } from "react";
+
 
 const Cats = () => {
-    return <div className='main-wrapper'>
-    <h2>Cats!</h2>
-    </div>
-}
+  const [breeds, setBreeds] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-export default Cats
+  useEffect(() => {
+    getBreeds().then((breeds) => {
+      const breedInfos = breeds.map((breed) => breed);
+      setBreeds(breedInfos);
+      setIsLoading(false);
+    });
+  }, []);
+
+  if (isLoading) return <p className="Loading"> Loading... </p>;
+
+  return (
+    <div>
+      <h2>Cat Breeds</h2>
+
+      <div className="breeds-list-container">
+        <ul className="breeds-list">
+          <AnimalCard breeds={breeds} />
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Cats;

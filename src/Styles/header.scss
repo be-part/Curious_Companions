@@ -1,8 +1,4 @@
-$colour_1: #AE9B88;
-$colour_2: #CCB6A2;
-$colour_3: #E3D2C1;
-$font_1: 'Heebo', sans-serif;
-$font_2:  'Shrikhand', cursive;
+@import '../Styles/variables.scss';
 
 header {
     height: 5vh;
