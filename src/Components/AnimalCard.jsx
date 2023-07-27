@@ -7,11 +7,20 @@ const AnimalCard = ({ breeds }) => {
         <li key={breed.info.id}>
           <div className="animal-card-wrapper">
             <div className="container1">
-              <p className="cat-name"> {breed.info.name} </p>
+              <p className="animal-name"> {breed.info.name} </p>
             </div>
-
             <div className="container2">
-              <img className="image" src={breed.image} alt={breed.info.name} />
+            {console.log(breed.imageWidth)}
+            <img
+            className={
+              breed.imageHeight > 1000 && breed.imageWidth > 1000 ? 'image-tallHeight-longWidth' 
+            : breed.imageHeight > 1000 && breed.imageWidth <= 1000 ? 'image-tallHeight-shortWidth' 
+            : breed.imageHeight <= 1000 && breed.imageWidth > 1000 ? 'image-shortHeight-longWidth'
+            : 'image-shortHeight-shortWidth'
+            }
+              src={breed.image}
+              alt={breed.info.name}
+            />
             </div>
 
             <div className="container3">
@@ -24,7 +33,7 @@ const AnimalCard = ({ breeds }) => {
             </div>
 
             <div className="container4">
-              <p className="text">{breed.info.description}</p>
+              
             </div>
 
             <div className="container5">

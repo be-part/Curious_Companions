@@ -5,9 +5,12 @@
 }
 
 .Loading {
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 main {
@@ -58,7 +61,7 @@ p {
   background-color: $colour_5;
 }
 
-.cat-name {
+.animal-name {
   margin: 0 auto;
   font-size: 1.2rem;
   font-family: $font_1;
@@ -75,10 +78,34 @@ p {
   background-color: $colour_2;
 }
 
-.image {
+.image-tallHeight-longWidth {
   display: flex;
-  width: 12rem;
-  max-height: 15rem;
+  width: auto;
+  max-height: 13rem;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.image-tallHeight-shortWidth {
+  display: flex;
+  width: auto;
+  max-height: 13rem;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.image-shortHeight-longWidth {
+  display: flex;
+  max-width: 18rem;
+  height: auto;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.image-shortHeight-shortWidth {
+  display: flex;
+  max-width: 18rem;
+  max-height: 13rem;
   border-radius: 4px;
   margin: 0 auto;
 }
