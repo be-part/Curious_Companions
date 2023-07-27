@@ -14,13 +14,15 @@ const RootLayout = () => {
     return (
     <div className="root-layout">
         <Header toggleOpen={toggleOpen} open={open}/>
+
         <div className="wrapper">
-        <Navbar open={open}/>
+
+        <Navbar open={open}/>   
 
         <main>
             <Outlet />
         </main>
-        
+
         </div>
     </div>
     )

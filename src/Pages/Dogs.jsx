@@ -17,22 +17,27 @@ const Dogs = () => {
   }, []);
 
   return (
-    <div>
+    <>
+    <div className="header-container">
       <h2>Dog Breeds</h2>
+      {/* <FilterMenu /> */}
+      </div>
 
-      {isLoading ? (
-        <div className="Loading">
-          <p>Loading...</p>
-          <img src={Dog} alt="loading" />
+    {isLoading ? (
+      <div className="loading-container">
+        <div className="loading-background">
+        <img className="loading-gif" src={Dog} alt="loading" />
+        <p className="loading-text">Loading...</p>
         </div>
-      ) : (
-        <div className="breeds-list-container">
-          <ul className="breeds-list">
-            <AnimalCard breeds={breeds} />
-          </ul>
-        </div>
-      )}
-    </div>
+      </div>
+    ) : (
+     
+        <ul className="breeds-list">
+          <AnimalCard breeds={breeds} />
+        </ul>
+      
+    )}
+  </>
   );
 };
 

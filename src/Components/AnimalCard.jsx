@@ -18,14 +18,15 @@ const AnimalCard = ({ breeds }) => {
             : breed.imageHeight <= 1000 && breed.imageWidth > 1000 ? 'image-shortHeight-longWidth'
             : 'image-shortHeight-shortWidth'
             }
+              id="image"
               src={breed.image}
               alt={breed.info.name}
             />
             </div>
 
             <div className="container3">
-              <p className="facts"> <span style={{fontWeight: 'bold'}}>Origin:</span> {breed.info.origin}</p>
-              <p className="facts"> <span style={{fontWeight: 'bold'}}>Temperament:</span> {breed.info.temperament}</p>
+              <p> <span style={{fontWeight: 'bold'}}>Origin:</span> {breed.info.origin}</p>
+              <p> <span style={{fontWeight: 'bold'}}>Temperament:</span> {breed.info.temperament}</p>
 
               {/* <Link to={`/reviews?category=${slug}`} className="links">
                 Click here to view all reviews for the {slug} category
@@ -33,12 +34,11 @@ const AnimalCard = ({ breeds }) => {
             </div>
 
             <div className="container4">
-              
+            <p> {breed.info.description} </p>
             </div>
 
             <div className="container5">
-              <a className="facts" href={breed.info.wikipedia_url}>
-                {" "}
+              <a className="facts" target="_blank" rel="noreferrer" href={breed.info.wikipedia_url}>
                 Visit the Wikipedia page.
               </a>
             </div>

@@ -2,7 +2,7 @@ import { getCatBreeds } from "../API.js/Api";
 import AnimalCard from "../Components/AnimalCard";
 import "../Styles/main.scss";
 import { useEffect, useState } from "react";
-import Cat from "../Assets/Cat.gif"
+import Cat from "../Assets/Cat.gif";
 
 const Cats = () => {
   const [breeds, setBreeds] = useState([]);
@@ -17,22 +17,27 @@ const Cats = () => {
   }, []);
 
   return (
-    <div>
+    <>
+      <div className="header-container">
       <h2>Cat Breeds</h2>
+  
+      </div>
 
       {isLoading ? (
-        <div className="Loading">
-          <p>Loading...</p>
-          <img src={Cat} alt="loading" />
+        <div className="loading-container">
+          <div className="loading-background">
+          <img className="loading-gif" src={Cat} alt="loading" />
+          <p className="loading-text">Loading...</p>
+          </div>
         </div>
       ) : (
-        <div className="breeds-list-container">
+       
           <ul className="breeds-list">
             <AnimalCard breeds={breeds} />
           </ul>
-        </div>
+        
       )}
-    </div>
+    </>
   );
 };
 
