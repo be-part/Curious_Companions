@@ -45,10 +45,17 @@ main {
 
 h2 {
   font-size: 2rem;
-  font-family: $font_1;
+  font-family: $font_3;
   text-align: left;
   display: table-cell;
   padding: 2rem;
+  color: $colour_5;
+}
+
+.page-text {
+  padding: 0 0 2rem 2rem;
+  font-size: 1rem;
+  font-family: $font_3;
 }
 
 p {

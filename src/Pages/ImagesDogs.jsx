@@ -17,7 +17,9 @@ const ImagesDogs = () => {
   return (
     <>
     <div className="header-container">
-      <h2>Images Dogs</h2>
+        <div>
+      <h2>Dog Images</h2>
+      <p className="page-text">Refresh for more!</p></div>
     </div>
 
       {isLoading ? (
