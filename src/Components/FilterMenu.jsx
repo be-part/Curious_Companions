@@ -1,25 +1,28 @@
 import "../Styles/filtermenu.scss";
 
-const FilterMenu = ({catBreeds}) => {
+const FilterMenu = ({ quantity, setQuantity }) => {
+
+  const handleQuantity = (value) => {
+    setQuantity(value);
+  };
+
+
   return (
   <>
-    <form className="filter-container">
-      <label htmlForfor="breeds">Breed:</label>
-      <select name="breeds">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
+    <div className="filter-container">
+    
+    <label htmlFor="quantity">Quantity (between 1 and 10):</label>
+    <input type="number" 
+    placeholder="1"  
+    htmlFor="quantity" 
+    min="1" 
+    max="10" 
+    value={quantity}
+    required 
+    onChange={(event) => handleQuantity(event.target.value)}/>
 
-      <label htmlForfor="sortBy">Sort By:</label>
-      <select name="sortBy">
-        <option value="asc">Asc</option>
-        <option value="desc">Desc</option>
-      </select>
 
-      <button disabled> Sort! </button>
-    </form>
+    </div>
     
   </>);
 };

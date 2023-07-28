@@ -10,7 +10,6 @@ const AnimalCard = ({ breeds }) => {
               <p className="animal-name"> {breed.info.name} </p>
             </div>
             <div className="container2">
-            {console.log(breed.imageWidth)}
             <img
             className={
               breed.imageHeight > 1000 && breed.imageWidth > 1000 ? 'image-tallHeight-longWidth' 
