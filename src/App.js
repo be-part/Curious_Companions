@@ -5,6 +5,8 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import RootLayout from "./Layouts/RootLayout";
 import ImagesCats from "./Pages/ImagesCats";
 import ImagesDogs from "./Pages/ImagesDogs";
+import SingleCat from "./Pages/SingleCat";
+import SingleDog from "./Pages/SingleDog";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +16,8 @@ const router = createBrowserRouter(
       <Route path="dogs" element={<Dogs />} />
       <Route path="images-cats" element={<ImagesCats />} />
       <Route path="images-dogs" element={<ImagesDogs />} />
+      <Route path="cats/view-cat/:breed_id" element={<SingleCat />} />
+      <Route path="dogs/view-dog/:breed_id" element={<SingleDog />} />
     </Route>
   )
 )

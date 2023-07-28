@@ -73,7 +73,7 @@ p {
 
 .animal-card-wrapper {
   width: 24rem;
-  height: 31rem;
+  height: 32rem;
   margin: 10px;
   border: 2px solid $colour_4;
   background-color: $colour_3;
@@ -97,8 +97,14 @@ p {
 
 .animal-name {
   margin: 0 auto;
-  font-size: 1.2rem;
-  font-family: $font_1;
+  font-size: 1.4rem;
+  font-family: $font_3;
+}
+
+.animal-name-small {
+  margin: 0 auto;
+  font-size: 1.1rem;
+  font-family: $font_3;
 }
 
 .container2 {
@@ -159,26 +165,18 @@ p {
   font-family: $font_1;
 }
 
+.descriptors {
+  font-weight: bold;
+  font-family: $font_3;
+}
+
 .container4 {
   width: auto;
-  height: 7.5rem;
+  max-height: 9rem;
+  height: auto;
   text-align: left;
   padding: 5px;
   background-color: $colour_3;
   font-size: 0.8rem;
   font-family: $font_1;
-}
-
-.container5 {
-  width: auto;
-  height: auto;
-  text-align: left;
-  padding: 5px;
-  background-color: $colour_3;
-  font-size: 0.7rem;
-  font-family: $font_1;
-}
-
-a {
-  color: $colour_4;
 }

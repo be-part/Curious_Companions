@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GetDogImages } from "../API.js/Api";
+import { getDogImages } from "../API.js/Api";
 import Dog from "../Assets/Dog.gif";
 import "../Styles/gallery.scss";
 
@@ -8,7 +8,7 @@ const ImagesDogs = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    GetDogImages().then((images) => {
+    getDogImages().then((images) => {
       setDogImages(images);
       setIsLoading(false);
     });

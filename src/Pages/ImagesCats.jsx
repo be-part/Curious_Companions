@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GetCatImages } from "../API.js/Api";
+import { getCatImages } from "../API.js/Api";
 import Cat from "../Assets/Cat.gif";
 import "../Styles/gallery.scss";
 
@@ -8,7 +8,7 @@ const ImagesCats = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    GetCatImages().then((images) => {
+    getCatImages().then((images) => {
       setCatImages(images);
       setIsLoading(false);
     });

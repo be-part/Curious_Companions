@@ -19,9 +19,10 @@ const Cats = () => {
   return (
     <>
       <div className="header-container">
-      <h2>Cat Breeds</h2>
-  
-      </div>
+        <div>
+      <h2>All Cat Breeds</h2>
+      <p className="page-text">Click on the image to find out more about that breed.</p></div>
+    </div>
 
       {isLoading ? (
         <div className="loading-container">
@@ -33,7 +34,7 @@ const Cats = () => {
       ) : (
        
           <ul className="breeds-list">
-            <AnimalCard breeds={breeds} />
+            <AnimalCard breeds={breeds} animal={"cat"}/>
           </ul>
         
       )}

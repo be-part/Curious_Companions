@@ -34,7 +34,7 @@ export function getCatBreeds() {
         });
 }
 
-export function GetCatImages() {
+export function getCatImages() {
     return catsAPI.get(`/images/search?limit=10`)
         .then((res) => res.data)
         .then((imageData) => {
@@ -45,9 +45,39 @@ export function GetCatImages() {
         .catch((err) => { return err });
 }
 
+export function getSingleCat({breed_id}) {
+    return catsAPI.get(`/breeds/${breed_id}`)
+        .then((res) => res.data)
+        .then((data) => {
+                const imageUrl = data.reference_image_id;
+                if (imageUrl) {
+                   
+                    return catsAPI.get(`/images/${imageUrl}`)
+                        .then((res) => {
+                            return { info: data, image: res.data.url };
+                        })
+                        .catch((error) => {
+                            console.error('Error fetching image:', error);
+                           
+                            return { info: data, image: "URL_NOT_AVAILABLE" };
+                        });
+                } else {
+                    
+                    return { info: data, image: "URL_NOT_AVAILABLE" };
+                }
+            })
+        .catch((err) => {
+            console.error('Error fetching breeds:', err);
+           
+            throw err;
+        });
+}
+
+
 const dogsAPI = axios.create({
     baseURL: 'https://api.thedogapi.com/v1/'
 })
+
 export function getDogBreeds() {
     return dogsAPI.get(`/breeds`)
         .then((res) => res.data)
@@ -81,7 +111,7 @@ export function getDogBreeds() {
 }
 
 
-export function GetDogImages() {
+export function getDogImages() {
     return dogsAPI.get(`/images/search?limit=10`)
         .then((res) => res.data)
         .then((imageData) => {
@@ -90,4 +120,32 @@ export function GetDogImages() {
             });
         })
         .catch((err) => { return err });;
+}
+
+export function getSingleDog({breed_id}) {
+    return dogsAPI.get(`/breeds/${breed_id}`)
+        .then((res) => res.data)
+        .then((data) => {
+                const imageUrl = data.reference_image_id;
+                if (imageUrl) {
+                   
+                    return dogsAPI.get(`/images/${imageUrl}`)
+                        .then((res) => {
+                            return { info: data, image: res.data.url };
+                        })
+                        .catch((error) => {
+                            console.error('Error fetching image:', error);
+                           
+                            return { info: data, image: "URL_NOT_AVAILABLE" };
+                        });
+                } else {
+                    
+                    return { info: data, image: "URL_NOT_AVAILABLE" };
+                }
+            })
+        .catch((err) => {
+            console.error('Error fetching breeds:', err);
+           
+            throw err;
+        });
 }
