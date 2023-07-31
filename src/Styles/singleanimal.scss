@@ -69,7 +69,6 @@ a {
   width: auto;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: left;
   text-align: left;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
@@ -104,4 +103,54 @@ a {
   background-color: $colour_6;
   font-size: 1rem;
   font-family: $font_3;
+}
+
+
+@media only screen and (max-width: 34rem) {
+  .single-animal-card-wrapper {
+    width: 18rem;
+    height: auto;
+  }
+
+  .single-animal-container1 {
+    flex-direction: column;
+    height: auto;
+  }
+  .image {
+    max-width: 10rem;
+    max-height: 12rem;
+    height: auto;
+  }
+  %commonStyleContainer {
+    height: auto;
+  }
+  .single-animal-container2 {
+    flex-direction: column;
+    height: auto;
+  }
+  .single-dog-container2 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .star-ratings {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .single-animal-rating-container {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 35rem) and (max-width: 48rem) {
+
+}
+
+@media only screen and (min-width: 49rem) and (max-width: 62rem) {
+
+}
+
+@media only screen and (min-width: 63rem) {
+
 }

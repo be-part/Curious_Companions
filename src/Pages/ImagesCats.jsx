@@ -30,6 +30,7 @@ const ImagesCats = () => {
           </div>
         </div>
       ) : (
+       
         <div className="grid-container">
           {catImages.map((image, index) => (
             <div>
@@ -42,6 +43,7 @@ const ImagesCats = () => {
             </div>
           ))}
         </div>
+      
       )}
     </>
   );

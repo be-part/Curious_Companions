@@ -18,7 +18,6 @@
 .dropdown {
     display: flex;
     flex-direction: column;
-    align-items: left;
     padding: 10px 20px;
     cursor: pointer;
     text-decoration: none;
@@ -70,12 +69,63 @@
    padding-left: 16px;
 }
 
-.linkTextClosed, .dropDownTextClosed {
-    @extend %commonStyleLinkClosed
-}
-
 .dropDownText {
     @extend %commonStyleLink;
     font-size: 0.8rem;
     padding-left: 0;
+}
+
+.linkTextClosed, .dropDownTextClosed {
+    @extend %commonStyleLinkClosed
+}
+
+
+/* Breakpoints */
+
+@media only screen and (max-width: 34rem) {
+    .sidenav {
+        min-height: 2.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .sideitem {
+        padding: 4px 3px 3px 3px;
+        width: auto;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    .linkText {
+        padding: 0 8px 0 8px;
+    }
+    .dropdown {
+        padding: 5px;
+    }
+    // #nav-button {
+        
+    // }
+    svg {
+        padding-left: 8px;
+        width: 30px;
+        height: 30px;
+    }
+    .compact {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 35rem) and (max-width: 48rem) {
+
+}
+
+@media only screen and (min-width: 49rem) and (max-width: 62rem) {
+
+}
+
+@media only screen and (min-width: 63rem) {
+
 }

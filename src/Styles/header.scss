@@ -23,12 +23,27 @@ header {
 }
 
 .menuBtn {
-    align-self: center;
     align-self: flex-start;  
-    justify-self: flex-end;
     color: $colour_1;
     border: none;
     cursor: pointer;
     padding: 10px 20px;
     background-color: transparent;
 }
+
+
+@media only screen and (max-width: 34rem) {
+    header {
+      font-size: 1.5rem;
+    }
+    .menuBtn {
+        display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 35rem) and (max-width: 48rem) {
+    header {
+        font-size: 2rem;
+      }
+  
+  }

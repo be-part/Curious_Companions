@@ -10,79 +10,88 @@ export default function Navbar({ open }) {
   const [dropdownCat, setDropdownCat] = useState(false);
   const [dropdownDog, setDropdownDog] = useState(false);
 
+
   return (
     <IconContext.Provider value={{ color: "#fff", size: 40 }}>
       <nav className={open ? "sidenav" : "sidenavClosed"}>
-        <NavLink className="sideitem" to="/">
-          <AiIcons.AiFillHome />
-          <span className={open ? "linkText" : "linkTextClosed"}>Home</span>
-        </NavLink>
-        <button
-          className="sideitem"
-          id="nav-button"
-          type="button"
-          aria-haspopup="menu"
-          aria-expanded={dropdownCat ? "true" : "false"}
-          onClick={() => setDropdownCat((prev) => !prev)}
-        >
-          <BiIcons.BiSolidCat />
-          <span className={open ? "linkText" : "linkTextClosed"}>
-            Cats
-          </span>{" "}
-        </button>
+        <div className="compact">
+          <NavLink className="sideitem" to="/">
+            <AiIcons.AiFillHome />
+            <span className={open ? "linkText" : "linkTextClosed"}>Home</span>
+          </NavLink>
+        </div>
 
-        <Dropdown
-          submenus={[
-            {
-              title: "All Breeds",
-              path: "cats",
-              icon: "",
-              className: "sub-nav-text",
-            },
+        <div className="compact">
+          <button
+            className="sideitem"
+            id="nav-button"
+            type="button"
+            aria-haspopup="menu"
+            aria-expanded={dropdownCat ? "true" : "false"}
+            onClick={() => setDropdownCat((prev) => !prev)}
+          >
+            <BiIcons.BiSolidCat />
+            <span className={open ? "linkText" : "linkTextClosed"}>
+              Cats
+            </span>{" "}
+          </button>
 
-            {
-              title: "Images",
-              path: "images-cats",
-              icon: "",
-              className: "sub-nav-text",
-            },
-          ]}
-          open={open}
-          dropdown={dropdownCat}
-        />
-        <button
-          className="sideitem"
-          id="nav-button"
-          type="button"
-          aria-haspopup="menu"
-          aria-expanded={dropdownDog ? "true" : "false"}
-          onClick={() => setDropdownDog((prev) => !prev)}
-        >
-          <BiIcons.BiSolidDog />
-          <span className={open ? "linkText" : "linkTextClosed"}>
-            Dogs
-          </span>{" "}
-        </button>
+          <Dropdown
+            submenus={[
+              {
+                title: "All Breeds",
+                path: "cats",
+                icon: "",
+                className: "sub-nav-text",
+              },
 
-        <Dropdown
-          submenus={[
-            {
-              title: "All Breeds",
-              path: "dogs",
-              icon: "",
-              className: "sub-nav-text",
-            },
+              {
+                title: "Images",
+                path: "images-cats",
+                icon: "",
+                className: "sub-nav-text",
+              },
+            ]}
+            open={open}
+            dropdown={dropdownCat}
+          />
+        </div>
 
-            {
-              title: "Images",
-              path: "images-dogs",
-              icon: "",
-              className: "sub-nav-text",
-            },
-          ]}
-          open={open}
-          dropdown={dropdownDog}
-        />
+        <div className="compact">
+          <button
+            className="sideitem"
+            id="nav-button"
+            type="button"
+            aria-haspopup="menu"
+            aria-expanded={dropdownDog ? "true" : "false"}
+            onClick={() => setDropdownDog((prev) => !prev)}
+          >
+            <BiIcons.BiSolidDog />
+            <span className={open ? "linkText" : "linkTextClosed"}>
+              Dogs
+            </span>{" "}
+          </button>
+
+          <Dropdown
+            submenus={[
+              {
+                title: "All Breeds",
+                path: "dogs",
+                icon: "",
+                className: "sub-nav-text",
+              },
+
+              {
+                title: "Images",
+                path: "images-dogs",
+                icon: "",
+                className: "sub-nav-text",
+              },
+            ]}
+            open={open}
+            dropdown={dropdownDog}
+          />
+        </div>
       </nav>
     </IconContext.Provider>
   );

@@ -1,7 +1,6 @@
 @import "../Styles/variables.scss";
 
 main {
-  margin: 5px;
   font-size: 10px;
   font-family: $font_1;
   width: 100%;
@@ -13,7 +12,6 @@ main {
 }
 
 .header-container {
-  display: table;
   width: 100%;
 }
 
@@ -44,22 +42,19 @@ main {
 }
 
 h2 {
+  margin: 0;
+  padding: 2rem;
   font-size: 2rem;
   font-family: $font_3;
   text-align: left;
-  display: table-cell;
-  padding: 2rem;
   color: $colour_5;
 }
 
 .page-text {
-  padding: 0 0 2rem 2rem;
+  margin: 0;
+  padding: 0 2rem 2rem 2rem;
   font-size: 1rem;
   font-family: $font_3;
-}
-
-p {
-  margin: 0;
 }
 
 .breeds-list {
@@ -179,4 +174,32 @@ p {
   background-color: $colour_3;
   font-size: 0.8rem;
   font-family: $font_1;
+}
+
+
+
+/* Breakpoints */
+
+@media only screen and (max-width: 34rem) {
+  .wrapper {
+    flex-direction: column;
+  }
+ h2 {
+    padding: 1rem;
+  }
+  .animal-card-wrapper {
+    width: 18rem;
+  }
+}
+
+@media only screen and (min-width: 35rem) and (max-width: 48rem) {
+
+}
+
+@media only screen and (min-width: 49rem) and (max-width: 62rem) {
+
+}
+
+@media only screen and (min-width: 63rem) {
+
 }
