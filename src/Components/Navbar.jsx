@@ -2,15 +2,11 @@ import "../Styles/navbar.scss";
 import { NavLink } from "react-router-dom";
 import { IconContext } from "react-icons";
 import Dropdown from "./Dropdown";
-import { useState } from "react";
 import * as AiIcons from "react-icons/ai";
 import * as BiIcons from "react-icons/bi";
 
-export default function Navbar({ open }) {
-  const [dropdownCat, setDropdownCat] = useState(false);
-  const [dropdownDog, setDropdownDog] = useState(false);
-
-
+export default function Navbar({ open, setDropdownCat, setDropdownDog, dropdownCat, dropdownDog }) {
+  
   return (
     <IconContext.Provider value={{ color: "#fff", size: 40 }}>
       <nav className={open ? "sidenav" : "sidenavClosed"}>
