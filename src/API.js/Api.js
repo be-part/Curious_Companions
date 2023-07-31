@@ -5,34 +5,36 @@ const catsAPI = axios.create({
 })
 export function getCatBreeds() {
     return catsAPI.get(`/breeds`)
-        .then((res) => res.data)
-        .then((breeds) => {
-            const imagePromises = breeds.map((cat) => {
-                const imageUrl = cat.reference_image_id;
-                if (imageUrl) {
-                    return catsAPI.get(`/images/${cat.reference_image_id}`)
-                        .then((res) => {
-                            return { info: cat, image: res.data.url, imageHeight: res.data.height, imageWidth: res.data.width };
-                        })
-                        .catch((error) => {
-                            console.error('Error fetching image:', error);
-                           
-                            return { info: cat, image: "URL_NOT_AVAILABLE" };
-                        });
-                } else {
-                    
-                    return { info: cat, image: "URL_NOT_AVAILABLE" };
-                }
-            });
-
-            return Promise.all(imagePromises);
-        })
-        .catch((err) => {
-            console.error('Error fetching breeds:', err);
-           
-            throw err;
+      .then((res) => res.data)
+      .then((breeds) => {
+        const imagePromises = breeds.map((cat) => {
+          const imageUrl = cat.reference_image_id;
+          if (imageUrl) {
+            return catsAPI.get(`/images/${cat.reference_image_id}`)
+              .then((res) => {
+                return {
+                  info: cat,
+                  image: res.data.url,
+                  imageHeight: res.data.height,
+                  imageWidth: res.data.width,
+                };
+              })
+              .catch((error) => {
+                return { info: cat, image: "URL_NOT_AVAILABLE" };
+              });
+          } else {
+            return { info: cat, image: "URL_NOT_AVAILABLE" };
+          }
         });
-}
+  
+        return Promise.all(imagePromises); // Wait for all promises to resolve
+      })
+      .catch((err) => {
+        return err;
+      });
+  }
+  
+  
 
 export function getCatImages() {
     return catsAPI.get(`/images/search?limit=10`)
