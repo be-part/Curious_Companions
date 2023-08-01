@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
-import { getCatImages } from "../API.js/Api";
 import Cat from "../Assets/Cat.gif";
 import "../Styles/gallery.scss";
+import useFetchImages from "../Hooks/useFetchImages";
 
 const ImagesCats = () => {
-  const [catImages, setCatImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    getCatImages().then((images) => {
-      setCatImages(images);
-      setIsLoading(false);
-    });
-  }, []);
+  const {images, isLoading} = useFetchImages("https://api.thecatapi.com/v1/");
 
   return (
     <>
@@ -32,17 +24,16 @@ const ImagesCats = () => {
       ) : (
        
         <div className="grid-container">
-          {catImages.map((image, index) => (
-            <div>
+        {images.map((image, index) => (
+          <div key={index}>
             <img
-              key={index}
               className="gallery-item"
               src={image}
               alt="cat"
             />
-            </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
       
       )}
     </>

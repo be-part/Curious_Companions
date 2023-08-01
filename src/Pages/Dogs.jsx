@@ -1,20 +1,11 @@
-import { getDogBreeds } from "../API.js/Api";
 import AnimalCard from "../Components/AnimalCard";
 import "../Styles/main.scss";
-import { useEffect, useState } from "react";
 import Dog from "../Assets/Dog.gif"
+import useFetchBreeds from "../Hooks/useFetchBreeds";
 
 const Dogs = () => {
-  const [breeds, setBreeds] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    getDogBreeds().then((breeds) => {
-      const breedInfos = breeds.map((breed) => breed);
-      setBreeds(breedInfos);
-      setIsLoading(false);
-    });
-  }, []);
+  const {breeds, isLoading} = useFetchBreeds("https://api.thedogapi.com/v1/");
 
   return (
     <>

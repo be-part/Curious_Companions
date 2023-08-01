@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
-import { getDogImages } from "../API.js/Api";
 import Dog from "../Assets/Dog.gif";
+import useFetchImages from "../Hooks/useFetchImages";
 import "../Styles/gallery.scss";
 
 const ImagesDogs = () => {
-  const [dogImages, setDogImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    getDogImages().then((images) => {
-      setDogImages(images);
-      setIsLoading(false);
-    });
-  }, []);
+  
+  const {images, isLoading} = useFetchImages("https://api.thedogapi.com/v1/");
 
   return (
     <>
@@ -31,17 +23,16 @@ const ImagesDogs = () => {
         </div>
       ) : (
         <div className="grid-container">
-          {dogImages.map((image, index) => (
-            <div>
+        {images.map((image, index) => (
+          <div key={index}>
             <img
-              key={index}
               className="gallery-item"
               src={image}
               alt="dog"
             />
-            </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
       )}
     </>
   );

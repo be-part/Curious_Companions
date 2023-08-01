@@ -1,20 +1,11 @@
-import { getCatBreeds } from "../API.js/Api";
 import AnimalCard from "../Components/AnimalCard";
 import "../Styles/main.scss";
-import { useEffect, useState } from "react";
 import Cat from "../Assets/Cat.gif";
+import useFetchBreeds from "../Hooks/useFetchBreeds";
 
 const Cats = () => {
-  const [breeds, setBreeds] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    getCatBreeds().then((breeds) => {
-      const breedInfos = breeds.map((breed) => breed);
-      setBreeds(breedInfos);
-      setIsLoading(false);
-    });
-  }, []);
+  const {breeds, isLoading} = useFetchBreeds("https://api.thecatapi.com/v1/");
 
   return (
     <>

@@ -1,21 +1,15 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { getSingleCat } from "../API.js/Api";
 import Cat from "../Assets/Cat.gif";
 import "../Styles/singleanimal.scss";
 import Rating from "../Components/Rating";
+import useFetchAnimal from "../Hooks/useFetchAnimal";
 
 const SingleCat = () => {
   const { breed_id } = useParams();
-  const [singleCat, setSingleCat] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    getSingleCat({ breed_id }).then((cat) => {
-      setSingleCat(cat);
-      setIsLoading(false);
-    });
-  }, [breed_id]);
+  const { animal, isLoading } = useFetchAnimal(
+    "https://api.thecatapi.com/v1/",
+    breed_id
+  );
 
   return (
     <>
@@ -28,7 +22,7 @@ const SingleCat = () => {
         </div>
       ) : (
         <>
-          <h2>{singleCat.info.name}</h2>
+          <h2>{animal.info.name}</h2>
 
           <div className="single-animal-card-container">
             <div className="single-animal-card-wrapper">
@@ -37,33 +31,33 @@ const SingleCat = () => {
                   <div className="single-animal-image-container">
                     <img
                       className="image"
-                      src={singleCat.image}
-                      alt={singleCat.info.name}
+                      src={animal.image}
+                      alt={animal.info.name}
                     />
                   </div>
                 </div>
 
                 <div className="single-animal-text-container">
-                  <p className="single-animal-description-text">
+                  <div className="single-animal-description-text">
                     <span style={{ fontWeight: "bold" }}>Origin: </span>
-                    {singleCat.info.origin}
-                  </p>
+                    {animal.info.origin}
+                  </div>
 
-                  <p className="single-animal-description-text">
+                  <div className="single-animal-description-text">
                     <span style={{ fontWeight: "bold" }}>Temperament: </span>
-                    {singleCat.info.temperament}
-                  </p>
+                    {animal.info.temperament}
+                  </div>
 
-                  <p className="single-animal-description-text">
+                  <div className="single-animal-description-text">
                     <span style={{ fontWeight: "bold" }}>About: </span>
-                    {singleCat.info.description}
-                  </p>
+                    {animal.info.description}
+                  </div>
 
                   <a
                     className="single-animal-description-text"
                     target="_blank"
                     rel="noreferrer"
-                    href={singleCat.info.wikipedia_url}
+                    href={animal.info.wikipedia_url}
                   >
                     Visit the Wikipedia page.
                   </a>
@@ -71,60 +65,60 @@ const SingleCat = () => {
               </div>
               <div className="single-animal-container2">
                 <div className="single-animal-rating-container">
-                  <p className="star-ratings">
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Hypoallergenic: </span>
-                    <Rating num={singleCat.info.hypoallergenic} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.hypoallergenic} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Indoor: </span>
-                    <Rating num={singleCat.info.indoor} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.indoor} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Lap: </span>
-                    <Rating num={singleCat.info.lap} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.lap} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Adaptability: </span>
-                    <Rating num={singleCat.info.adaptability} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.adaptability} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Affection: </span>
-                    <Rating num={singleCat.info.affection_level} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.affection_level} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Intelligence: </span>
-                    <Rating num={singleCat.info.intelligence} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.intelligence} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Child Friendly: </span>
-                    <Rating num={singleCat.info.child_friendly} />
-                  </p>
+                    <Rating num={animal.info.child_friendly} />
+                  </div>
                 </div>
                 <div className="single-animal-rating-container">
-                  <p className="star-ratings">
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Dog Friendly: </span>
-                    <Rating num={singleCat.info.dog_friendly} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.dog_friendly} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Energy Level: </span>
-                    <Rating num={singleCat.info.energy_level} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.energy_level} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Grooming: </span>
-                    <Rating num={singleCat.info.grooming} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.grooming} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Health Issues: </span>
-                    <Rating num={singleCat.info.health_issues} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.health_issues} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Shedding Level: </span>
-                    <Rating num={singleCat.info.shedding_level} />
-                  </p>
-                  <p className="star-ratings">
+                    <Rating num={animal.info.shedding_level} />
+                  </div>
+                  <div className="star-ratings">
                     <span style={{ fontWeight: "bold" }}>Vocalisation: </span>
-                    <Rating num={singleCat.info.vocalisation} />
-                  </p>
+                    <Rating num={animal.info.vocalisation} />
+                  </div>
                 </div>
               </div>
             </div>
