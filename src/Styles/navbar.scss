@@ -76,7 +76,7 @@
 }
 
 .linkTextClosed, .dropDownTextClosed {
-    @extend %commonStyleLinkClosed
+    @extend %commonStyleLinkClosed;
 }
 
 
@@ -104,9 +104,6 @@
     .dropdown {
         padding: 5px;
     }
-    // #nav-button {
-        
-    // }
     svg {
         padding-left: 8px;
         width: 30px;
