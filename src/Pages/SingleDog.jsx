@@ -4,9 +4,11 @@ import "../Styles/singleanimal.scss";
 import useFetchAnimal from "../Hooks/useFetchAnimal";
 
 const SingleDog = () => {
-  
   const { breed_id } = useParams();
-  const {animal, isLoading} = useFetchAnimal("https://api.thedogapi.com/v1/", breed_id);
+  const { animal, isLoading } = useFetchAnimal(
+    "https://api.thedogapi.com/v1/", 
+    breed_id
+  );
 
   return (
     <>
