@@ -68,7 +68,7 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  // padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 
 .animal-card-wrapper {
@@ -194,6 +194,23 @@ h2 {
     padding: 1rem;
   }
   .animal-card-wrapper {
-    width: 18rem;
+    width: 16rem;
+    height: 36rem;
+  }
+  .animal-name {
+    font-size: 1.2rem;
+  } 
+  .image-tallHeight-longWidth {
+    max-height: 9rem;
+  }
+  .image-tallHeight-shortWidth {
+    max-height: 9rem;
+  }
+  .image-shortHeight-longWidth {
+    max-width: 15rem;
+  }
+  .image-shortHeight-shortWidth {
+    max-width: 15rem;
+    max-height: 9rem;
   }
 }
