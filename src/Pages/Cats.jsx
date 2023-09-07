@@ -7,6 +7,7 @@ const Cats = () => {
 
   const {breeds, isLoading} = useFetchBreeds("https://api.thecatapi.com/v1/");
 
+
   return (
     <>
       <div className="header-container">

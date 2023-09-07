@@ -16,7 +16,7 @@
     border-radius: 5px;
     transition: all 0.25s ease-in-out;
     &:hover {
-      border-color: $colour_2;
+      border-color: $header;
       transform: scale(1.05);
     }
     img {

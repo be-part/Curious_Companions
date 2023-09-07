@@ -27,15 +27,15 @@ export default function Navbar({ open, setDropdownCat, setDropdownDog, dropdownC
             onClick={() => setDropdownCat((prev) => !prev)}
           >
             <BiIcons.BiSolidCat />
-            <span className={open ? "linkText" : "linkTextClosed"}>
+            <span className={open ? "linkText" : "linkTextClosed"} id={dropdownCat ? "bold" : "not-bold"}>
               Cats
-            </span>{" "}
+            </span>
           </button>
 
           <Dropdown
             submenus={[
               {
-                title: "All Breeds",
+                title: "Breeds",
                 path: "cats",
                 icon: "",
                 className: "sub-nav-text",
@@ -63,15 +63,15 @@ export default function Navbar({ open, setDropdownCat, setDropdownDog, dropdownC
             onClick={() => setDropdownDog((prev) => !prev)}
           >
             <BiIcons.BiSolidDog />
-            <span className={open ? "linkText" : "linkTextClosed"}>
+            <span className={open ? "linkText" : "linkTextClosed"} id={dropdownDog ? "bold" : "not-bold"}>
               Dogs
-            </span>{" "}
+            </span>
           </button>
 
           <Dropdown
             submenus={[
               {
-                title: "All Breeds",
+                title: "Breeds",
                 path: "dogs",
                 icon: "",
                 className: "sub-nav-text",

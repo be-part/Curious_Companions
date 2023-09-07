@@ -52,7 +52,7 @@ h2 {
   font-size: 2rem;
   font-family: $font_3;
   text-align: left;
-  color: $colour_5;
+  color: $title;
 }
 
 .page-text {
@@ -75,8 +75,8 @@ h2 {
   width: 25rem;
   height: 32rem;
   margin: 10px;
-  border: 2px solid $colour_4;
-  background-color: $colour_3;
+  border: 2px solid $navbar;
+  background-color: $navbar;
   border-radius: 8px;
   box-shadow: 10px 5px 5px rgb(94, 78, 69);
 }
@@ -93,7 +93,7 @@ h2 {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   padding: 5px;
-  background-color: $colour_5;
+  background-color: $title;
 }
 
 .animal-name {
@@ -116,7 +116,7 @@ h2 {
   align-items: center;
   text-align: left;
   padding: 5px;
-  background-color: $colour_2;
+  background-color: $header;
 }
 
 .image-tallHeight-longWidth {
@@ -160,9 +160,9 @@ h2 {
   height: 4rem;
   text-align: left;
   padding: 5px;
-  background-color: $colour_3;
+  background-color: $navbar;
   font-size: 0.8rem;
-  color: $colour_4;
+  color: $subheading;
   font-family: $font_1;
 }
 
@@ -177,7 +177,7 @@ h2 {
   height: auto;
   text-align: left;
   padding: 5px;
-  background-color: $colour_3;
+  background-color: $navbar;
   font-size: 0.8rem;
   font-family: $font_1;
 }

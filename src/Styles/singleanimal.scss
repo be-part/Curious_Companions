@@ -10,8 +10,8 @@
   width: 50rem;
   height: 50rem;
   margin: 10px;
-  border: 2px solid $colour_4;
-  background-color: $colour_3;
+  border: 2px solid $subheading;
+  background-color: $navbar;
   border-radius: 8px;
   box-shadow: 10px 5px 5px rgb(94, 78, 69);
 }
@@ -28,7 +28,7 @@
   border-top-right-radius: 7px;
   padding: 1rem;
   margin: 5px 5px 0 5px;
-  background-color: $colour_2;
+  background-color: $header;
 }
 
 .image {
@@ -58,9 +58,9 @@
 }
 
 a {
-  color: $colour_4;
+  color: $subheading;
   font-family: $font_3;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .single-animal-container2 {
@@ -74,7 +74,7 @@ a {
   border-bottom-right-radius: 7px;
   padding: 1rem;
   margin: 0px 5px 5px 5px;
-  background-color: $colour_6;
+  background-color: $apptitle;
 }
 
 .single-animal-rating-container {
@@ -100,7 +100,7 @@ a {
   border-bottom-right-radius: 7px;
   padding: 1rem;
   margin: 0 5px 5px 5px;
-  background-color: $colour_6;
+  background-color: $apptitle;
   font-size: 1rem;
   font-family: $font_3;
 }

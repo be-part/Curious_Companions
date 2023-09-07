@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AnimalCard = ({ breeds, animal }) => {
 
-
+ console.log(breeds)
   return (
     <>
       {breeds.map((breed) => (
@@ -25,6 +25,7 @@ const AnimalCard = ({ breeds, animal }) => {
             }
               id="image"
               src={breed.image}
+             
               alt={breed.info.name}
               
             />
