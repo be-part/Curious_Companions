@@ -10,6 +10,7 @@ main {
 p {
   padding: 0;
   margin: 0;
+  font-size: 14px;
 }
 
 .wrapper {
@@ -50,7 +51,7 @@ h2 {
   margin: 0;
   padding: 2rem;
   font-size: 2rem;
-  font-family: $font_3;
+  font-family: $font_1;
   text-align: left;
   color: $title;
 }
@@ -59,7 +60,7 @@ h2 {
   margin: 0;
   padding: 0 2rem 2rem 2rem;
   font-size: 1rem;
-  font-family: $font_3;
+  font-family: $font_1;
 }
 
 .breeds-list {
@@ -99,13 +100,13 @@ h2 {
 .animal-name {
   margin: 0 auto;
   font-size: 1.4rem;
-  font-family: $font_3;
+  font-family: $font_1;
 }
 
 .animal-name-small {
   margin: 0 auto;
   font-size: 1.1rem;
-  font-family: $font_3;
+  font-family: $font_1;
 }
 
 .container2 {
@@ -168,7 +169,7 @@ h2 {
 
 .descriptors {
   font-weight: bold;
-  font-family: $font_3;
+  font-family: $font_1;
 }
 
 .container4 {
