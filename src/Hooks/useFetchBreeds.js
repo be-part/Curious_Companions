@@ -44,7 +44,7 @@ const useFetchBreeds = (baseUrl) => {
         .catch((err) => {
           return err;
         });
-      }, []);
+      }, [animalAPI]);
     
       return { breeds, isLoading };
     };

@@ -22,7 +22,7 @@ const useFetchImages = (baseUrl) => {
         console.error("Error fetching images:", err);
         setIsLoading(false);
       });
-  }, []);
+  }, [animalAPI]);
 
   return { images, isLoading };
 };
