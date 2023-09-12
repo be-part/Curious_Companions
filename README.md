@@ -8,6 +8,9 @@ This project was built to develop my front-end skills; including using React, HT
 Users can view breeds of cats and dogs, click on an individual breed to see more in-depth information and retrieve some images and gifs of the animal in the gallery tab.  
 This app uses The Cat Api: https://thecatapi.com/  
 
+## Link to deployed version  
+
+https://curious-companions.netlify.app/ 
 
 ## Part 1: Cloning
 
