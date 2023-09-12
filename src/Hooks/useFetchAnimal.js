@@ -36,7 +36,7 @@ const useFetchAnimal = (baseUrl, breed_id) => {
      .catch((err) => {
        return err;
      });
-    }, []);
+    }, [animalAPI, breed_id]);
 
     return {animal, isLoading}
 }
