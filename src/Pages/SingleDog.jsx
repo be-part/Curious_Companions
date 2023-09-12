@@ -51,10 +51,10 @@ const SingleDog = () => {
                 </div>
               </div>
               <div className="single-dog-container2">
-                <p><span style={{ fontWeight: "bold" }}>Height: </span>{animal.info.height.imperial} inches</p>
-                <p><span style={{ fontWeight: "bold" }}>Weight: </span>{animal.info.weight.imperial} pounds</p>
-                <p><span style={{ fontWeight: "bold" }}>Bred For: </span>{animal.info.bred_for}</p>
-                <p><span style={{ fontWeight: "bold" }}>Breed Group: </span>{animal.info.breed_group}</p>
+                <p className="single-animal-description-text"><span style={{ fontWeight: "bold" }}>Height: </span>{animal.info.height.imperial} inches</p>
+                <p className="single-animal-description-text"><span style={{ fontWeight: "bold" }}>Weight: </span>{animal.info.weight.imperial} pounds</p>
+                <p className="single-animal-description-text"><span style={{ fontWeight: "bold" }}>Bred For: </span>{animal.info.bred_for}</p>
+                <p className="single-animal-description-text"><span style={{ fontWeight: "bold" }}>Breed Group: </span>{animal.info.breed_group}</p>
               </div>
 
             </div>
