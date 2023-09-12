@@ -1,0 +1,23 @@
+@import '../Styles/variables.scss';
+
+.footer {
+    margin-top: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid #747474;
+    border-width: 1px 0;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .credits {
+    font-family: $font_1;
+    font-size: 14px;
+    display: inline;
+    color: #FFFFFF;
+  }

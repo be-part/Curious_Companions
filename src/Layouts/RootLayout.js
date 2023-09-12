@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar"
 import { Outlet } from "react-router-dom"
 import { useState } from "react"
 import '../Styles/main.scss'
+import Footer from "../Components/Footer"
 
 const RootLayout = () => {
 
@@ -28,6 +29,8 @@ const RootLayout = () => {
         </main>
 
         </div>
+
+        <Footer />
     </div>
     )
 }
