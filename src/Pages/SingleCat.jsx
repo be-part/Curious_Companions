@@ -14,7 +14,7 @@ const SingleCat = () => {
   return (
     <>
       {isLoading ? (
-        <div className="loading-container">
+        <div className="loading-container2">
           <div className="loading-background">
             <img className="loading-gif" src={Cat} alt="loading" />
             <p className="loading-text">Loading...</p>

@@ -13,7 +13,7 @@ const SingleDog = () => {
   return (
     <>
       {isLoading ? (
-        <div className="loading-container">
+        <div className="loading-container2">
           <div className="loading-background">
             <img className="loading-gif" src={Dog} alt="loading" />
             <p className="loading-text">Loading...</p>

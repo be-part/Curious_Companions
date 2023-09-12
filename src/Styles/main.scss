@@ -30,6 +30,16 @@ p {
   width: 100%;
 }
 
+.loading-container2 {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
 .loading-background {
   display: flex;
   flex-direction: column;
