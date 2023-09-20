@@ -10,7 +10,7 @@ main {
 p {
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .wrapper {
@@ -172,28 +172,35 @@ h2 {
   text-align: left;
   padding: 5px;
   background-color: $navbar;
-  font-size: 0.8rem;
-  color: $subheading;
-  font-family: $font_1;
+}
+
+.container4 {
+  width: auto;
+  max-height: 6rem;
+  height: auto;
+  text-align: left;
+  padding: 5px;
+  background-color: $navbar;
+}
+
+.continue-reading {
+  color: $background;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 1rem;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+
 }
 
 .descriptors {
   font-weight: bold;
   font-family: $font_1;
+  font-size: 1rem;
+  color: $subheading;
 }
-
-.container4 {
-  width: auto;
-  max-height: 9rem;
-  height: auto;
-  text-align: left;
-  padding: 5px;
-  background-color: $navbar;
-  font-size: 0.8rem;
-  font-family: $font_1;
-}
-
-
 
 /* Breakpoints */
 
