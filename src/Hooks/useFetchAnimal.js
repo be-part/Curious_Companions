@@ -1,17 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 const useFetchAnimal = (baseUrl, breed_id) => {
 
-    const animalAPI = axios.create({
-        baseURL: baseUrl,
-      });
+  const createAnimalAPI = useCallback(() => {
+    return axios.create({
+      baseURL: baseUrl,
+    });
+  }, [baseUrl]); 
 
     
     const [animal, setAnimal] = useState({});
     const [isLoading, setIsLoading] = useState(true);
   
     useEffect(() => {
+    const animalAPI = createAnimalAPI();
+
      animalAPI
      .get(`/breeds/${breed_id}`)
      .then((res) => res.data)
@@ -36,7 +40,7 @@ const useFetchAnimal = (baseUrl, breed_id) => {
      .catch((err) => {
        return err;
      });
-    }, [animalAPI, breed_id]);
+    }, [createAnimalAPI, breed_id]);
 
     return {animal, isLoading}
 }

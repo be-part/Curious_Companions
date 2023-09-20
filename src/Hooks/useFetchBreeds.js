@@ -6,7 +6,7 @@ const useFetchBreeds = (baseUrl) => {
     return axios.create({
       baseURL: baseUrl,
     });
-  }, [baseUrl]);
+  }, [baseUrl]); 
 
       const [breeds, setBreeds] = useState([]);
       const [isLoading, setIsLoading] = useState(true);

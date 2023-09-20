@@ -10,7 +10,7 @@ const SingleCat = () => {
     "https://api.thecatapi.com/v1/",
     breed_id
   );
-
+  
   return (
     <>
       {isLoading ? (

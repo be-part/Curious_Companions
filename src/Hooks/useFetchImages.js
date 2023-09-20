@@ -1,15 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 const useFetchImages = (baseUrl) => {
-  const animalAPI = axios.create({
-    baseURL: baseUrl,
-  });
+  const createAnimalAPI = useCallback(() => {
+    return axios.create({
+      baseURL: baseUrl,
+    });
+  }, [baseUrl]); 
 
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const animalAPI = createAnimalAPI();
+
     animalAPI
       .get(`/images/search?limit=10`)
       .then((res) => res.data)
@@ -22,7 +26,7 @@ const useFetchImages = (baseUrl) => {
         console.error("Error fetching images:", err);
         setIsLoading(false);
       });
-  }, [animalAPI]);
+  }, [createAnimalAPI]);
 
   return { images, isLoading };
 };
